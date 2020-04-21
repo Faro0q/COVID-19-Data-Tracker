@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    background-color: bisque;
+}
+
+/* Hide all views to start off with, then dynamically show using JS */
+div.view {
+    display: none;
+    padding-top: 10px;
+}
+
+:root{
+    --mdc-theme-primary: #ff1717;
+}
+
+element.style {
+    background-color: bisque;
+}
+
+div.view.active {
+    display: block;
+}
+
+main {
+    max-width: 1000px;
+    margin: 1 auto;
+}
+
+input {
+    display: block;
+}
+
+label{
+    display: block;
+}
+
+div.search-row {
+    display: flex;
+    align-items: center;
+}
+
+button#add-country {
+    margin-left: 1rem;
+}

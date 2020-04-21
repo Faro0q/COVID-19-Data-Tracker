@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>IT-202 - Project 4</title>
+        
+        <!-- Material Components for the Web -->
+        <link href="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.css" rel="stylesheet">
+        <script src="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+        <!-- Custom CSS and JS -->
+        <link rel="stylesheet" href="style.css">
+        <script defer src="page.js"></script>
+        <script defer src="buttons.js"></script>
+    </head>
+    <body>
+        <header class=" mdc-top-app-bar">
+            <div class="mdc-top-app-bar__row">
+                <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+                    <span class="mdc-top-app-bar__title">COVID-19 Data Tracker</span>
+                <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
+                    <a href="#search" class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded" aria-label="Search">search</a>
+                    <a href="#table" class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded" aria-label="Data Table">table_chart</a>
+                    <a href="#chart" class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded" aria-label="Chart">insert_chart</a>
+                </section>
+            </div>
+        </header>
+            
+        <main class="mdc-top-app-bar--fixed-adjust">
+            <div class="view" id="search">
+                <div class="search-row">
+                    <div class="mdc-text-field mdc-text-field--outlined">
+                        <input list="countries" id="country-input" class="mdc-text-field__input"/>
+                        <div class="mdc-notched-outline">
+                            <div class="mdc-notched-outline__leading"></div>
+                            <div class="mdc-notched-outline__notch">
+                                <label for="country-input" class="mdc-floating-label">Searching for countries</label>
+                            </div>
+                            <div class="mdc-notched-outline__trailing"></div>
+                        </div>
+                        <datalist id="countries"></datalist>
+                    </div>
+                    <button id="add-country" class="mdc-button mdc-button--raised">
+                        <span class="mdc-button__ripple"></span>
+                        <span class="mdc-button__label">Insert into the table</span>
+                    </button>
+                </div>
+                <ul class="country-tracking-list mdc-list"></ul>
+                <button id="create-chart" class="mdc-button mdc-button--raised">
+                    <span class="mdc-button__ripple"></span>
+                    <span class="mdc-button__label">Create chart</span>
+                </button>
+            </div>
+             <div class="view" id="table">
+                <div class="row">
+                    <h1 id="chart-header" class="mdc-typography--headline5">No countries are in the table.</h1>
+                </div>
+                <div class="mdc-data-table">
+                    <table class="mdc-data-table__table"></table>
+                </div>
+            </div>
+
+            <div class="view" id="chart">
+                <h1 id="chart-placeholder" class="mdc-typography--headline5">didnt complete</h1>
+                <div id="curve_chart"></div>
+            </div>
+        </main>
+        
+    </body>
+</html>
